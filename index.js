@@ -25,7 +25,7 @@ try {
 }
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the Book Store API rr");
+  res.send("Welcome to the Book Store API ");
 });
 
 // defining routes
