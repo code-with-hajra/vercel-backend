@@ -6,17 +6,6 @@ import path from "path";
 import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
 
-// Error handling for path-to-regexp
-process.on("uncaughtException", (err) => {
-  console.error("Uncaught Exception:", err);
-  // Continue execution instead of crashing
-  if (err.message && err.message.includes("Missing parameter name")) {
-    console.error("Path-to-regexp error detected, but continuing execution");
-  } else {
-    process.exit(1);
-  }
-});
-
 const app = express();
 
 app.use(cors());
