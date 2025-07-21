@@ -5,13 +5,13 @@ import cors from "cors";
 import path from "path";
 import bookRoute from "./route/book.route.js";
 import userRoute from "./route/user.route.js";
-
+require('dotenv').config()
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-dotenv.config();
+
 
 const PORT = process.env.PORT || 4000;
 const URI = process.env.MongoDBURI;
